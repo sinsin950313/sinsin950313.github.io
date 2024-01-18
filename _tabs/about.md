@@ -102,6 +102,7 @@ E-mail : sinsin63@naver.com
 ---
 
 # <center>약력</center>
+
 |기간|이력|기타|
 |:---:|:---:|:---:|
 | 23.07.17 - 23.11.31 | Odysseyergames | UI 프로그래머 |
