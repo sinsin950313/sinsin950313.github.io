@@ -81,4 +81,6 @@ dwrite.h를 통해 문자를 출력할 경우 Device에서 많은 연산이 소�
 
 {% include embed/youtube.html id='TbB69kr_9q4' %}
 
+[다운로드](https://naver.me/G8tx6SwT)
+
 [Source](https://github.com/sinsin950313/KGCA/tree/main/Project/KGCA41/DX2DGameProject)

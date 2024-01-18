@@ -75,6 +75,6 @@ Spring Camera
 
 {% include embed/youtube.html id='X2dgJuERe9M' %}
 
-[다운로드](http://naver.me/5G5ug3Ri)
+[다운로드](https://naver.me/5G5ug3Ri)
 
 [Source](https://github.com/sinsin950313/TeamProject)

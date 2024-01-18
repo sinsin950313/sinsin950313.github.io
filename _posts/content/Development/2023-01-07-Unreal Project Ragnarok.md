@@ -50,4 +50,6 @@ Player의 Unit은 속성을 가지며, 속성이 일치하는 Unit이 일정 수
 
 {% include embed/youtube.html id='5-tMm34VhsM' %}
 
+[Download](https://naver.me/5QGB143u)
+
 [Source](https://github.com/sinsin950313/KGCA/tree/main/Unreal/Ragnarok)

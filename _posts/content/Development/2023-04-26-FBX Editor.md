@@ -63,6 +63,6 @@ FBX 및 Text파일인 Script 파일 IO
 
 2번 : 1번에서 선택된 위치에 상대좌표로 Socket 추가
 
-[다운로드](http://naver.me/5oizaMNG)
+[다운로드](https://naver.me/5oizaMNG)
 
 [Source](https://github.com/sinsin950313/KGCA/tree/main/Project/KGCA41/CharacterToolWindow)

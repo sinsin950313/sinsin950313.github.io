@@ -9,6 +9,6 @@ tags: ["ue", "portfolio", "teamproject"]
 
 {% include embed/youtube.html id='ejRE3VO9VsQ' %}
 
-[다운로드](http://naver.me/FCBRRcN4)
+[다운로드](https://naver.me/FCBRRcN4)
 
 [Source](https://github.com/sinsin950313/UETeamProject)
