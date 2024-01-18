@@ -56,18 +56,21 @@ MRT를 이용한 Light & Shadow
 DDD의 Service를 이용한 AI FSM
 
 ### Collision Process
-![](/images/71bd46d1-7155-4b50-9d27-21030038f289)
+![](/images/245681170-71bd46d1-7155-4b50-9d27-21030038f289.png)
 
 Collision 감지 이후 충돌 처리
 
-![](/images/8a083dc7-a956-4fff-987f-0c0c07b2c39c)
-![](/images/6c3dc8d7-70d6-4871-87a8-3f49dd26f12d)
+![](/images/245681410-8a083dc7-a956-4fff-987f-0c0c07b2c39c.png)
+
+![](/images/245681467-6c3dc8d7-70d6-4871-87a8-3f49dd26f12d.png)
 
 Spring Camera
 
 ### Edge 검출 및 외곽선
-![](/images/4724dc5e-f2df-464a-8c72-0f4eeaf86318)
-![](/images/f88e2b89-3aad-47b2-ada4-1dd0b2c99094)
+
+![](/images/245681821-4724dc5e-f2df-464a-8c72-0f4eeaf86318.png)
+
+![](/images/245681951-f88e2b89-3aad-47b2-ada4-1dd0b2c99094.png)
 
 
 {% include embed/youtube.html id='X2dgJuERe9M' %}
