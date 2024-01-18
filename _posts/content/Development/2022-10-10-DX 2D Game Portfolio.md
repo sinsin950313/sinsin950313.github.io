@@ -1,7 +1,7 @@
 ---
 title: "DX 2D Game Portfolio"
 date: 2022-10-10
-categories: ["Development", "KGCA"]
+categories: ["Development", "portfolio"]
 tags: ["2d", "directx", "kgca", "portfolio"]
 ---
 DirectX를 이용하여 2D Game을 구현해보았다.
