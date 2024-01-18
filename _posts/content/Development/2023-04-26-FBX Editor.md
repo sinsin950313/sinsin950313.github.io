@@ -10,6 +10,20 @@ tags: ["cpp", "mfc", "directx", "portfolio"]
 
 FBX를 읽고 수정할 수 있는 툴 입니다.
 
+## 개요
+- 제작 기간 : 1달
+- 개발 인원 : 1인
+- 개발 환경
+  - C++
+  - DirectX
+  - MFC
+- 주요 기술
+  - FBX SDK
+  - Bone Hierarchy - Socket
+  - Skinning Mesh
+  - Multi Texture
+  - 3D Camera
+
 ## 주요 기능
 ![](/images/234487650-7102ac4f-6e39-436a-9f21-5b6991a86887.png)
 
@@ -22,20 +36,6 @@ Animation 추가 및 삭제 가능
 ![](/images/234487875-0533e8c1-0e2e-4961-9fa5-22e94075063b.PNG)
 
 Text파일 IO 가능
-
-## [주요 기술](https://help.autodesk.com/view/FBX/2020/ENU/?guid=FBX_Developer_Help_cpp_ref_index_html)
-
-FBX SDK를 이용하여 FBX File의 IO 및 수정
-
-Bone의 상속 구조에 대한 이해
-
-Animation 계산 방식의 이해
-
-Skinning Mesh에 대한 이해
-
-Diffuse, Normal, MultiTexture에 대한 이해
-
-Camera배치에 대한 이해
 
 ## 사용설명서
 

@@ -4,14 +4,28 @@ date: 2022-10-10
 categories: ["Development", "portfolio"]
 tags: ["2d", "directx", "kgca", "portfolio"]
 ---
-DirectX를 이용하여 2D Game을 구현해보았다.
+![](/images/234495299-890e6b87-bbff-43b4-b2f6-a77ee35f45c5.png)
 
-![](/images/4853989b-7913-4275-a5d4-627a03215cb0-image.png)
+## 개요
+- 장르 : 벨트스크롤 슈팅 게임
+- 제작 인원 : 1인
+- 제작 기간 : 1달
+- 개발 환경
+  - C++
+  - DirectX
+  - FMod
+- 주요 기술
+  - Sprite Animation
+  - Mask Texture
+  - Memery Pool
+  - 2D Collision Check
 
 ## 기술스택
 
 ![](/images/24144daa-6db5-425a-912c-97d475673294-image.png)
 
+# 시놉시스
+![](/images/234496274-058bbf45-3058-468c-9271-ddcf770c8b33.png)
 
 ## 구현기술
 ### MVC 패턴

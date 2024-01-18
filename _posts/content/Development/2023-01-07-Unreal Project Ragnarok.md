@@ -7,7 +7,16 @@ tags: ["portfolio"]
 
 ![](/images/93cb5ef0-3a52-4876-89d1-9adb1c96fb57-image.png)
 
-![](/images/074aba37-bdcc-478b-af1f-d3709412c3bc-image.png)
+# Ragnarok
+
+-	장르 : 오토배틀러 디펜스
+-	게임 방법 : 매 턴마다 수비 병력을 구매, 진급, 배치 시킨 후 몰려오는 적들을 방어
+-	제작 인원 : 1인
+-	제작 기간 : 1달
+-	개발 환경 : Unreal Engine 5
+
+## 시놉시스
+![image](https://user-images.githubusercontent.com/40855235/234490041-86b94b94-346e-45f8-bdb5-f93872441c1b.png)
 
 ## Rule
 
