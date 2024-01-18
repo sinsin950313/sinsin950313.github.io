@@ -10,9 +10,11 @@ tags: ["blockchain", "portfolio", "smart contract"]
 
 # 개요
 고전적인 Server-Client구조에서 발생하는 게임 내 재화 문제의 원인 중 하나는 Server와 Client사이의 동기화 시점에 의한 문제였습니다.
+
 ![](/images/ff4429ab-eb8a-48bb-8d69-c358bf551f9e-image.png)
 
 플레이어의 모든 순간을 매번 Server에 동기화할 순 없기 때문에 이를 해결하기 위해선 개발자의 섬세한 동기화 시점 선택을 요구했습니다.<br><br><br>
+
 ![](/images/b8713fa9-3f26-4da6-a06e-6c1d33d07c9f-image.png)
 
 이러한 부분에 있어서, '공개 장부'라는 블록체인의 특성과, '프로그래밍 가능'이라는 Smart Contract의 특성을 이용한다면 동기화 시점에 대한 고려가 필요없는 DataBase Server의 역할을 구현할 수 있지 않을까라는 궁금증을 가지고 개발을 시도해봤습니다.<br><br>
@@ -30,9 +32,9 @@ tags: ["blockchain", "portfolio", "smart contract"]
 
 # 설계
 ![](/images/dac8d467-bb6b-406f-93fa-8714bfcdc46d-image.png)
-<br><br>
+
 ![](/images/d5f5a1dd-7c7a-4fbd-866c-e18e03d1768b-image.png)
-<br><br>
+
 상위 설계의 경우, 다른 프로젝트나, 개인적인 개발 중에도 여러번 진행해봤지만, 각 객체의 기능과 Interface를 미리 설계하는 것은 생각보다 어려운 작업이었습니다.<br><br><br>
 
 # 코드
@@ -163,23 +165,31 @@ CommunicationModule을 통해 받아온 Serialize된 데이터는 Properties에�
 
 # 결과
 #### Play
-{% include embed/youtube.html id='{ThUGTnFtTj0}' %}
+
+{% include embed/youtube.html id='ThUGTnFtTj0' %}
 
 #### Buy
-{% include embed/youtube.html id='{1ou_eQwEk0E}' %}
+
+{% include embed/youtube.html id='1ou_eQwEk0E' %}
 
 #### Send
-{% include embed/youtube.html id='{zXzwJ044bKI}' %}
+
+{% include embed/youtube.html id='zXzwJ044bKI' %}
 
 #### Transaction
+
 ![](/images/eba300e5-7243-40b5-b77a-f4c1051ec85b-image.png)
+
 ![](/images/109fbc53-b616-46c8-826c-0f6442c7ce60-image.png)
+
 ![](/images/665b9b4f-63e5-4874-9639-a708b5a829b3-image.png)
+
 ![](/images/a3beb61d-cadc-45ba-ad5d-c7e915561e68-image.png)
 
 게임 플레이 전후로 Transaction이 발생한 것을 확인할 수 있습니다.<br><br>
 
 마지막으로 활동 영상입니다.
-{% include embed/youtube.html id='{_iiJBtuhorQ}' %}
 
-https://github.com/sinsin950313/BlockChain-used-as-DataBase 
+{% include embed/youtube.html id='_iiJBtuhorQ' %}
+
+[Source](https://github.com/sinsin950313/BlockChain-used-as-DataBase)

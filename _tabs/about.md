@@ -6,10 +6,6 @@ order: 4
 
 ![](/assets/img/profile.jpg)
 
-HP : 010-8443-2207
-<br>
-E-mail : sinsin63@naver.com
-
 > <center>Ideals are like the stars: we never reach them, but like the mariners of the sea, we chart our course by them.<br></center>
 > <center>Carl Schurz<br></center>
 > <br>
@@ -19,6 +15,9 @@ E-mail : sinsin63@naver.com
 <br>
 <center>로망을 길잡이 삼아 현실의 바다를 여행하는 개발자 신승빈입니다.</center>
 <br>
+<center>HP : 010-8443-2207</center>
+<br>
+<center>E-mail : sinsin63@naver.com</center>
 
 ---
 
@@ -76,16 +75,16 @@ E-mail : sinsin63@naver.com
 
 - Velog To Git Blog
   - Velog Posting을 Git Blog로 옮기기 위한 추가 작업 프로그램
-  - 
+  - [VelogToGitBlog]({% post_url /content/Development/2024-01-17-Velog To Git Blog %})
 - UnDeadSpace
   - Unreal 기반 FPS 팀 프로젝트
-  - 
+  - [UnDeadSpace]({% post_url /content/Development/2023-06-07-UnDeadSpace %})
 - LolShinSoul
   - DirectX 기반 자체 개발 엔진을 이용한 팀 프로젝트
-  - 
-- FBX Character Tool
+  - [LolShinSoul]({% post_url /content/Development/2023-06-14-LolShinSoul %})
+- FBX Editor
   - DirectX와 MFC를 이용한 FBX Editor
-  - 
+  - [FBX Editor]({% post_url /content/Development/2023-04-26-FBX Editor %})
 - Ragnarok
   - Unreal 기반 오토배틀러 디펜스 게임
   - [Ragnarok]({% post_url /content/Development/2023-01-07-Unreal Project Ragnarok %})

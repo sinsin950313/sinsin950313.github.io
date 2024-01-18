@@ -269,8 +269,8 @@ int Server::fire()
 Turret 역시 개념론적인 동작을 관리하는 Turret class와 실질적인 동작을 관리하는 TurretDriveModule class로 분리하였습니다.<br><br><br>
 
 # 작동영상
-{% include embed/youtube.html id='{C2GlhAOUUfk}' %}
+{% include embed/youtube.html id='C2GlhAOUUfk' %}
 
 
 
-자세한 소스 코드는 https://github.com/sinsin950313/Auto-Fire-Suppression-Turret에서 보실 수 있으십니다.
+[Source](https://github.com/sinsin950313/Auto-Fire-Suppression-Turret)
