@@ -1,6 +1,6 @@
 ---
 title: "VSCode에서 CMake로 Build하기"
-date: 2022-07-16
+date: 2024-01-19
 categories: ["Development", "Non"]
 tags: ["vscode", "cmake"]
 ---
