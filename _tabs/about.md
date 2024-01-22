@@ -75,7 +75,7 @@ order: 4
 
 - Easy Coding Test with VSCode
   - std::cin으로 받는 Coding Test 예제 입력을 번거롭게 매번 칠 필요 없이 자동화하는 프로그램
-  - [Source](https://github.com/sinsin950313/EasyCodingTestWithVSCode)
+  - [EasyCodingTestWithVSCode](https://github.com/sinsin950313/EasyCodingTestWithVSCode)
 - Velog To Git Blog
   - Velog Posting을 Git Blog로 옮기기 위한 추가 작업 프로그램
   - [VelogToGitBlog]({% post_url /content/Development/2024-01-17-Velog To Git Blog %})
