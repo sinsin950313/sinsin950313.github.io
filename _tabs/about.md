@@ -72,7 +72,9 @@ order: 4
 ---
 
 # <center>Portfolio</center>
-
+- EasyCodingWithVSCode
+  - VSCode에서 Coding Test를 연습할 때 입력값을 자동으로 넣어서 테스트할 수 있는 프로그램
+  - [EasyCodingWithVSCode]({% post_url /content/Development/2024-01-22-EasyCodingTestWithVSCode %})
 - Velog To Git Blog
   - Velog Posting을 Git Blog로 옮기기 위한 추가 작업 프로그램
   - [VelogToGitBlog]({% post_url /content/Development/2024-01-17-Velog To Git Blog %})
