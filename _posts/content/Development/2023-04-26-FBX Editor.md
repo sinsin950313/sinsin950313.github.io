@@ -42,6 +42,6 @@ FBX를 읽고 수정할 수 있는 툴 입니다.
 
 [FBX Editor](https://www.notion.so/FBX-Editor-49ed992968c34836a17ef49e088a84ba?pvs=21)
 
-[다운로드](http://naver.me/FynIMzRj)
+[다운로드](https://naver.me/FynIMzRj)
 
 [Source](https://github.com/sinsin950313/KGCA/tree/main/Project/KGCA41/CharacterToolWindow)

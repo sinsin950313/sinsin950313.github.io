@@ -31,6 +31,6 @@ tags: ["cpp", "portfolio", "vscode", "bat", "cmake"]
 
 [Easy Coding Test with VSCode](https://www.notion.so/Easy-Coding-Test-with-VSCode-d41b5be860ba49be9d67f875a1d57544?pvs=21)
 
-[Download](http://naver.me/xpWFlFem)
+[Download](https://naver.me/xpWFlFem)
 
 [Source](https://github.com/sinsin950313/EasyCodingTestWithVSCode)

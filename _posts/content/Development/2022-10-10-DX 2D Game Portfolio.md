@@ -40,6 +40,6 @@ tags: ["2d", "directx", "kgca", "portfolio"]
 
 [Top Gun](https://www.notion.so/Top-Gun-6437274549e14087bcafa201ab860c6d?pvs=21)
 
-[다운로드](http://naver.me/G6fG6eMy)
+[다운로드](https://naver.me/G6fG6eMy)
 
 [Source](https://github.com/sinsin950313/KGCA/tree/main/Project/KGCA41/DX2DGameProject)

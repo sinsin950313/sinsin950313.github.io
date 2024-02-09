@@ -39,4 +39,4 @@ Velog를 Crawling해서 다운로드 하는 프로그램은 이걸 사용했습�
 
 [Source](https://github.com/sinsin950313/VelogToGitBlog)
 
-[다운로드](http://naver.me/Ga2ScRTa)
+[다운로드](https://naver.me/Ga2ScRTa)
