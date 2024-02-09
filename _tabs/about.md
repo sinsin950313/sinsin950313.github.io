@@ -15,8 +15,6 @@ order: 4
 <br>
 <center>로망을 길잡이 삼아 현실의 바다를 여행하는 개발자 신승빈입니다.</center>
 <br>
-<center>HP : 010-8443-2207</center>
-<br>
 <center>E-mail : sinsin63@naver.com</center>
 
 ---
@@ -74,30 +72,47 @@ order: 4
 # <center>Portfolio</center>
 - EasyCodingWithVSCode
   - VSCode에서 Coding Test를 연습할 때 입력값을 자동으로 넣어서 테스트할 수 있는 프로그램
+  - Keyword : Stream(fstream, sstream), 빌드 자동화(CMake, bat)
   - [EasyCodingWithVSCode]({% post_url /content/Development/2024-01-22-EasyCodingTestWithVSCode %})
+
 - Velog To Git Blog
   - Velog Posting을 Git Blog로 옮기기 위한 추가 작업 프로그램
+  - Keyword : Modern CPP(STL, Smart Pointer, Lambda, File System), File IO, Design Pattern(Strategy Pattern, Singleton Pattern)
   - [VelogToGitBlog]({% post_url /content/Development/2024-01-17-Velog To Git Blog %})
+
 - UnDeadSpace
   - Unreal 기반 FPS 팀 프로젝트
+  - Keyword :
   - [UnDeadSpace]({% post_url /content/Development/2023-06-07-UnDeadSpace %})
+
 - LolShinSoul
   - DirectX 기반 자체 개발 엔진을 이용한 팀 프로젝트
+  - Keyword : Deffered Rendering, FSM, Collision Process, Edge Process
   - [LolShinSoul]({% post_url /content/Development/2023-06-14-LolShinSoul %})
+
 - FBX Editor
   - DirectX와 MFC를 이용한 FBX Editor
+  - Keyword : FBX SDK, MFC, File IO, Skinning Mesh, Multi Texture
   - [FBX Editor]({% post_url /content/Development/2023-04-26-FBX Editor %})
+
 - Ragnarok
   - Unreal 기반 오토배틀러 디펜스 게임
+  - Keyword :
   - [Ragnarok]({% post_url /content/Development/2023-01-07-Unreal Project Ragnarok %})
+
 - Top Gun
   - DirectX를 이용한 2D 슈팅 게임
+  - Keyword : FSM, Sprite Animation, Mask Texture, Memory Pool, Text UI
   - [Top Gun]({% post_url /content/Development/2022-10-10-DX 2D Game Portfolio %})
+
 - BlockChain Used as Serverless Database
   - BlockChain의 SmartContract를 이용하여 Serverless Database 구현
+  - Keyword : BlockChain, Smart Contract
   - [Blockers]({% post_url /content/Development/2022-07-11-BlockChain Used as DataBase %})
+
 - Auto Fire Supression System
   - 화재 감지 및 자동 화재 진압 시스템
+  - Keyword : Arduino, Embeded System
   - [Auto Fire Suppression System]({% post_url /content/Development/2022-07-11-Auto Fire Suppression Turret %})
 
 ---
