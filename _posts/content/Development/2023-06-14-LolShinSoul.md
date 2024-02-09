@@ -9,7 +9,7 @@ tags: ["cpp", "directx", "portfolio", "teamproject"]
 
 ## Keyword : Deffered Rendering, FSM, Collision Process, Edge Process
 
-![234498154-ffaa7cd6-9bbb-4f14-b423-c42b302dc000.PNG](https://postfiles.pstatic.net/MjAyNDAyMDlfMTkx/MDAxNzA3NDczODQ0Mzg3.R-OnPPhk45OirD-AtXJuGcIA9oFXtQXoYxDBV6-xBKcg.68hipY759BXn9Z5ya-fWH7sv6OXCKpR8jlahN_cuqHMg.PNG.sinsin63/234498154-ffaa7cd6-9bbb-4f14-b423-c42b302dc000.png?type=w580)
+![](/images/234498154-ffaa7cd6-9bbb-4f14-b423-c42b302dc000.PNG)
 
 ## 개요
 

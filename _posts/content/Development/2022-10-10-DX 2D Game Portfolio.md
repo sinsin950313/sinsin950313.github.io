@@ -9,7 +9,7 @@ tags: ["2d", "directx", "kgca", "portfolio"]
 
 ## Keyword : FSM, Sprite Animation, Mask Texture, Memory Pool, Text UI
 
-![234495299-890e6b87-bbff-43b4-b2f6-a77ee35f45c5.png](https://postfiles.pstatic.net/MjAyNDAyMDlfNzQg/MDAxNzA3NDczODQ0MDUz.ZCnIz6qJLj2kpfF_7b-rXAcM_N5s-3pNoQGiQPX7sy0g.HRX-U7oWe6yxtS6vjk5n1MJ9p5K0n6JtplptPwLoRzkg.PNG.sinsin63/234495299-890e6b87-bbff-43b4-b2f6-a77ee35f45c5.png?type=w580)
+![](/images/234495299-890e6b87-bbff-43b4-b2f6-a77ee35f45c5.png)
 
 ## 개요
 

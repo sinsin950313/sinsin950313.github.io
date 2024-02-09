@@ -9,7 +9,7 @@ tags: ["cpp", "portfolio"]
 
 ## Keyword : Arduino, Embeded System
 
-![fae4244c-0f60-49ab-becb-029598a6abff-image.jpeg](https://postfiles.pstatic.net/MjAyNDAyMDlfMjIz/MDAxNzA3NDczODQ0NDA4.Pu65SOAszTaScLNnwlATpMBWlldZYjYGUdVfW-_CmeAg.1lLMlUk1mdWGpPFdfUDHudXybWktWqsJ2EyX2S6_tgcg.JPEG.sinsin63/fae4244c-0f60-49ab-becb-029598a6abff-image.jpeg?type=w580)
+![](/images/fae4244c-0f60-49ab-becb-029598a6abff-image.jpeg)
 
 ## 개요
 

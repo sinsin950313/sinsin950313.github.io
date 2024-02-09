@@ -9,7 +9,7 @@ tags: ["cpp", "portfolio"]
 
 ## Keyword : Modern CPP(STL, Smart Pointer, Lambda, File System), File IO, Design Pattern(Strategy Pattern, Singleton Pattern)
 
-![298268274-df1ac3d3-f72f-4984-89d0-ed3b5517f2df.PNG](https://postfiles.pstatic.net/MjAyNDAyMDlfMjYw/MDAxNzA3NDczODQzOTQ2.VHYPTxLdf4ai1NUGy_AgfX9J_w-kdylWW3O9fJGrjqIg.jE2VOaiIbt-ocYh_rx8UAypyddG88QqwwxGMCtmFmIog.PNG.sinsin63/298268274-df1ac3d3-f72f-4984-89d0-ed3b5517f2df.png?type=w580)
+![](/images/298268274-df1ac3d3-f72f-4984-89d0-ed3b5517f2df.PNG)
 
 ## 개요
 

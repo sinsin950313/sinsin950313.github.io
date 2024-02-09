@@ -9,7 +9,7 @@ tags: ["cpp", "mfc", "directx", "portfolio"]
 
 ## Keyword : FBX SDK, MFC, File IO, Skinning Mesh, Multi Texture
 
-![234487473-02631f39-ed76-4d9e-88b1-e64328b5cda5.png](https://postfiles.pstatic.net/MjAyNDAyMDlfMSAg/MDAxNzA3NDczODQzOTc4.i5WVFT7xbYl6qGD-Ub2xRsNjey5K02YuoMEYELcjmWcg.thDT6P51tUCci7H4zxf4WGsL6i5w0PMBGol2lFeCEwwg.PNG.sinsin63/234487473-02631f39-ed76-4d9e-88b1-e64328b5cda5.png?type=w580)
+![](/images/234487473-02631f39-ed76-4d9e-88b1-e64328b5cda5.png)
 
 FBX를 읽고 수정할 수 있는 툴 입니다.
 

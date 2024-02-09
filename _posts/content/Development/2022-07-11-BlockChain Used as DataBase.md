@@ -8,7 +8,7 @@ tags: ["blockchain", "portfolio", "smart contract"]
 
 ## Keyword : BlockChain, Smart Contract
 
-![bf3a4a38-ac7b-4b6f-a4fa-5bc06b9c36c3-image.png](https://postfiles.pstatic.net/MjAyNDAyMDlfMTc2/MDAxNzA3NDczODQ0NDEz.yW7tx8WiOOMGfXoPKD_fwcH6GbejMPZxjxGpNcVat4kg.oYbupIMkdM0_ZH9Zkkbr_rauydjhR5j1pUr6qvprzuMg.PNG.sinsin63/bf3a4a38-ac7b-4b6f-a4fa-5bc06b9c36c3-image.png?type=w580)
+![](/images/bf3a4a38-ac7b-4b6f-a4fa-5bc06b9c36c3-image.png)
 
 ## 개요
 
