@@ -44,4 +44,4 @@ tags: ["portfolio"]
 
 [Ragnarok](https://www.notion.so/Ragnarok-f0ab5d233a0f4b01848eb41a7481c2b8?pvs=21)
 
-[Download](http://naver.me/GOzpOdDF)
+[Download](https://naver.me/GOzpOdDF)
