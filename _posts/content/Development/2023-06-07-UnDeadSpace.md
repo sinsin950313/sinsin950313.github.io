@@ -11,8 +11,6 @@ tags: ["ue", "portfolio", "teamproject"]
 
 ![](/images/297622322-26f36bb9-e56b-4ee6-8055-7a101c518c76.png)
 
-![297622322-26f36bb9-e56b-4ee6-8055-7a101c518c76.png](https://postfiles.pstatic.net/MjAyNDAyMDlfMTM5/MDAxNzA3NDczODQ0MzE5.XMd__wAMczbJA0bZhVuwcxvEPJl_ditOmxKbR4WgsAcg.yplIucOCIuUqXShDm1GTTfmpgz4T95AHkv7jQULp6EAg.PNG.sinsin63/297622322-26f36bb9-e56b-4ee6-8055-7a101c518c76.png?type=w580)
-
 Unreal Engine으로 만든 FPS 팀 프로젝트
 
 ## 개요
