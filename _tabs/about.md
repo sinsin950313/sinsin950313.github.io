@@ -82,7 +82,7 @@ order: 4
 
 - UnDeadSpace
   - Unreal 기반 FPS 팀 프로젝트
-  - Keyword :
+  - Keyword : Perforce, ini File 수정, UPROPERTY, Collision System, Blueprint Programming, Level Sequence, NavMesh, Spline, Perlin
   - [UnDeadSpace]({% post_url /content/Development/2023-06-07-UnDeadSpace %})
 
 - LolShinSoul
@@ -97,7 +97,7 @@ order: 4
 
 - Ragnarok
   - Unreal 기반 오토배틀러 디펜스 게임
-  - Keyword :
+  - Keyword : Landscape, Animation, Blueprint Programming, AI, Data Table, UI
   - [Ragnarok]({% post_url /content/Development/2023-01-07-Unreal Project Ragnarok %})
 
 - Top Gun
