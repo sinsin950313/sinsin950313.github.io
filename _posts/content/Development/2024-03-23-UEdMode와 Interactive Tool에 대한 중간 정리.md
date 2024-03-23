@@ -42,4 +42,4 @@ Asset : UE에서 Package를 읽어들인 정보. Contents Browser에서 표현�
 <br>
 Object : 읽어들인 Asset을 UObject로 생성한 객체
 
-Reference : https://lifeisforu.tistory.com/360
+[Reference](https://lifeisforu.tistory.com/360)
