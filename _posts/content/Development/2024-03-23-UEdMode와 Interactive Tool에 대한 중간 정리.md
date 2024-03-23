@@ -7,7 +7,7 @@ tags: ["unreal", "engine extension", "edmode", "interactive tool", "package, ass
 
 # UEdMode와 InteractiveTool
 
-![](/images/316240255-324caf38-eb20-4e67-8b49-7905c1fc24f6.png)
+![](/images/316240255-324caf38-eb20-4e67-8b49-7905c1fc24f6.PNG)
 
 UEdMode는 입력을 Interactive Tool을 이용하여 처리하는 것으로 보임.
 <br>
