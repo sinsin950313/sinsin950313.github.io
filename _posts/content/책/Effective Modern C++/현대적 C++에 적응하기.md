@@ -802,3 +802,259 @@ constexpr 함수는 그 값이 컴파일 도중에 알려지는 인수들로 호
 constexpr 객체나 함수는 non-constexpr 객체나 함수보다 광범위한 문맥에서 사용할 수 있다.
 <br>
 constexpr은 객체나 함수의 인터페이스의 일부이다.
+
+# 항목 16 : const member function을 Thread Safe하게 작성하라
+```cpp
+class Polynomial
+{
+public:
+    using RootsType = std::vector<double>;
+
+    RootsType roots() const
+    {
+        if(!rootsAreVaild)
+        {
+            ...
+            rootsAreValid = true;
+        }
+        return rootVals;
+    }
+
+private:
+    mutable bool rootsAreValid { false };
+    mutable RootsType rootVals { };
+};
+```
+임의의 다항식을 나타내는 클래스가 존재할 때 다항식의 근을 제공하는 함수를 제공하는 클래스를 구현한다.
+<br>
+이 때 근을 계산하는 함수를 임의의 캐시에 저장한 후 캐시에 있는 값을 반환하는 형태로 구현한다고 가정한다.
+<br>
+roots함수는 다항식을 변형하지 않으므로 const member function이어야 하지만, roots함수에서 사용되는 rootsAreVaild나 rootVals는 변형 되어야 하므로 mutable해야 한다.
+
+```cpp
+// Thread 1
+auto rootsOfP = p.roots();
+// Thread 2
+auto valsGivingZero = p.roots();
+```
+root함수는 const member function으로 읽기 연산을 의미한다.
+<br>
+즉, const member function으로써 다중 스레드에서 제공이 가능해야 한다.
+<br>
+하지만 위 방식으로 구현된 함수는 thread safe하지 못하다.
+<br>
+이 문제를 해결하기 위해 mutex를 사용하거나 std::atomic을 사용해야 한다
+<br>
+하지만 mutex와 std::atomic을 사용하는 순간 복사와 이동 연산은 불가능하다.
+
+```cpp
+class Widget
+{
+public:
+    int magicValue() const
+    {
+        if(cacheValid)
+        {
+            return cachedValue;
+        }
+        else
+        {
+            auto val1 = expensiveComputation1();
+            auto val2 = expensiveComputation2();
+            cachedValue = val1 + val2;
+            cachedValid = true;
+            return cachedValue;
+        }
+    }
+
+private:
+    mutable std::atomic<bool> cacheValid { false };
+    mutable std::atomic<int> cachedValue;
+};
+```
+std::atomic이 mutex보다 비용이 싸지만 동기화가 필요한 변수가 둘 이상인 경우에는 문제가 발생할 수 있음.
+<br>
+둘 이상의 변수의 동기화를 관리하려면 mutex를 사용하는 것이 좋음
+<br>
+const member function을 호출하는 스레드가 많아야 1개라는 점을 보장할 수 있다면 mutex나 std::atomic을 사용하지 않는 편이 비용을 절약할 수 있음
+<br>
+하지만 그런 상황은 매우 희귀하므로 cosnt member function은 항상 Thread safe하게 작성해야 한다.
+
+## 정리
+동시적 문맥에서 쓰이지 않을 것이 확실한 경우가 아니라면, const member function은 Thread safe하게 작성해야 한다
+<br>
+std::atomic 변수는 mutex에 비해 성능상의 이점이 있지만, 하나의 변수 또는 메모리 장소를 다룰 때에만 적합하다.
+
+# 항목 17 : 특수 멤버 함수들의 자동 작성 조건을 숙지하라
+특수 멤버 함수(Special member function)이란 C++이 스스로 작성하는 멤버 함수를 의미
+<br>
+C++98에서는 기본 생성자, 소멸자, 복사 생성자, 복사 배정 연산자가 존재
+<br>
+이 함수들은 클래스에 명시적으로 선언되어있지 않지만, 이 함수를 사용하는 클라이언트 코드가 존재할 때에만 작성된다
+<br>
+인수를 받는 생성자가 명시적으로 선언된 클래스는 기본 생성자가 작성되지 않는다.
+<br>
+특수 멤버 함수는 암묵적으로 public, inline 하다
+<br>
+가상 소멸자를 상속하는 파생 클래스의 소멸자 역시 virtual이다.
+
+```cpp
+class Widget
+{
+public:
+    Widget(Widget&& rhs);
+
+    Widget& operator=(Widget&& rhs);
+};
+```
+C++11은 이동 생성자, 이동 배정 연산자를 특수 멤버 함수로 추가
+<br>
+이동 생성자, 이동 배정 연산자는 비정적 멤버 변수를 멤버별로 이동 '요청'을 수행하고, std::move가 적용되지 않을 경우 복사 연산이 수행된다.
+
+복사 생성자와 복사 배정 연산자는 독립적
+- 둘 중 하나가 이미 선언되어 있고, 선언되지 않은 함수를 클라이언트에서 호출한다면 선언되어있지 않은 함수가 자동으로 생성됨
+
+이동 생성자와 이동 배정 연산자는 독립적이지 않음
+- 둘 중 하나를 선언하면 컴파일러는 다른 하나를 작성하지 않음
+- 만약 둘 중 하나를 프로그래머가 선언했다면 이는 컴파일러에서 작성하는 이동 연산이 적합하지 않을 가능성이 크므로 남은 연산 역시 적합하지 않을 것이라는 판단 하에 작성하지 않는 것이 이유
+- 마찬가지 이유로 복사 연산(생성, 배정)이 선언되었다면 이동 연산들은 자동으로 작성되지 않고, 반대로 이동 연산이 선언되었다면 복사 연산은 자동으로 생성되지 않음
+
+### 3의 법칙
+복사 생성자, 복사 배정 연산자, 소멸자 중 하나라도 선언했다면 나머지 둘도 선언해야 한다
+<br>
+이는 해당 연산자를 선언하는 이유는 해당 클래스가 어떠한 의미로든 자원을 관리해야 하기 때문이다.
+<br>
+자동으로 작성된 복사 연산들은 자원 관리에 적합하지 않다.
+<br>
+반대로 클래스에 소멸자가 선언되어 있다면 해당 클래스는 자동으로 생성되는 복사 연산자가 적합하지 않을 가능성이 높다.
+<br>
+이런 추론을 바탕으로 C++11부터는 소멸자가 선언된 클래스에서는 자동으로 이동 연산자를 작성하지 않는다.(복사 연산자는 그대로 작성하는 이유는 단지 기존 코드와의 호환성 문제로 인한 것이다)
+
+이동 연산자는 다음 세 조건이 모두 만족할 경우에 필요에 의해서 자동으로 작성된다
+1. 클래스에 그 어떤 복사 연산도 선언되어 있지 않다.
+2. 클래스에 그 어떤 이동 연산도 선언되어 있지 않다.
+3. 클래스에 소멸자가 선언되어 있지 않다.
+
+```cpp
+class Widget
+{
+public:
+    ~Widget();
+
+    Widget(const Widget&) = default;
+
+    Widget& operator=(const Widget&) = default;
+};
+```
+복사 연산자에 대해서도 위 조건에 의해 명시적으로 선언하는 것을 추천하는데, 컴파일러가 작성하는 행동을 명시적으로 선언하고싶다면 default를 사용하면 된다
+
+```cpp
+// https://godbolt.org/z/KrxEYf4WG
+
+#include <iostream>
+
+class TestClass
+{
+public:
+    TestClass() = default;
+    TestClass(const TestClass&& r) { std::cout << "Move Constructor" << std::endl; }
+    TestClass(const TestClass& r) { std::cout << "Copy constructor" << std::endl; }
+    TestClass& operator=(const TestClass&& r) { std::cout << "Move Assignment" << std::endl; }
+    TestClass& operator=(const TestClass& r) { std::cout << "Copy Assignment" << std::endl; }
+};
+
+class WrappingClass
+{
+public:
+    WrappingClass() { std::cout << "Constructor" << std::endl; }
+
+    ~WrappingClass() { std::cout << "Destructor" << std::endl; }
+
+private:
+    TestClass Test;
+};
+
+int main()
+{
+    StringTable origin;
+    StringTable Copy = std::move(origin);
+
+    return 0;
+}
+
+// Result without Destructor
+// Constructor
+// Move Constructor
+
+// Result with Destructor
+// Constructor
+// Copy constructor
+// Destructor
+// Destructor
+```
+또한 default를 사용하는 것이 프로그래머의 의도를 명시적으로 알리는 것일 뿐만 아니라 미묘한 버그를 피하는데도 도움이 되므로, 컴파일러가 작성할 수 있는 연산자들도 명시적으로 default 선언을 해주는 것이 좋음
+<br>
+이동 요청은 std::move를 수행했을 때 수행이 불가능하다면 복사를 수행함
+<br>
+소멸자가 추가되므로써 WrappingClass의 이동 연산자는 자동으로 작성되지 않았고, default 상황에서는 이동 생성자로 생성되었을 클래스 멤버 변수가 복사 생성자로 생성되는 것을 확인할 수 있음
+
+## 특수 멤버 함수 규칙
+### 기본 생성자
+클래스에 사용자 선언 생성자가 없으면 자동으로 작성
+
+### 소멸자
+소멸자가 기본적으로 noexcept이다.
+<br>
+기반 클래스 소멸자가 virtual일 경우 기본으로 작성되는 파생 클래스의 소멸자도 virtual이다.
+
+### 복사 생성자
+non-static 멤버 변수들을 멤버별로 복사 생성.
+<br>
+클래스에 사용자 선언 복사 생성자가 없을 경우에 자동으로 작성
+<br>
+클래스에 사용자 선언 이동 연산이 하나라도 선언되어있으면 delete 처리
+<br>
+사용자 선언 복사 배정 연산자나 소멸자가 있는 클래스에서 자동으로 작성되는 복사 생성자는 비권장 기능
+
+### 복사 배정 연산자
+non-static 멤버 변수들을 멤버별로 복사 배정
+<br>
+클래스에 사용자 선언 복사 배정 연산자가 없을 경우에 자동으로 작성
+<br>
+클래스에 사용자 선언 이동 연산이 하나라도 선언되어 있으면 delete 처리
+<br>
+사용자 선언 복사 생성자나 소멸자가 있는 클래스에서 자동으로 작성되는 복사 배정 연산자는 비권장 기능
+
+### 이동 생성자와 이동 배정 연산자
+각각 non-static 멤버 변수의 멤버별 이동을 수행
+<br>
+클래스에 사용자 선언 복사 연산들과 이동 연산들, 소멸자가 없을 경우에만 자동으로 작성
+
+### 참고
+```cpp
+class Widget
+{
+public:
+    template<typename T>
+    Widget(const T& rhs);
+
+    template<typename T>
+    Widget& operator=(const T& rhs);
+}
+```
+멤버 함수 템플릿이 존재하더라도 특수 멤버 함수는 조건만 성립하면 자동으로 작성된다.
+<br>
+위 코드의 경우 T가 Widget이면 서명이 일치하여 인스턴스화 될 수 있지만 Widget은 여전히 복사 연산들과 이동 연산들을 작성한다
+
+## 정리
+컴파일러가 스스로 작성할 수 있는 멤버 함수들, 즉 기본 생성자와 소멸자, 복사 연산들, 이동 연산들을 가리켜 특수 멤버 함수라고 부른다.
+<br>
+이동 연산들은 이동 연산들이나 복사 연산들, 소멸자가 명시적으로 선언되어 있지 않은 클래스에 대해서만 자동으로 작성된다.
+<br>
+복사 생성자는 복사 생성자가 명시적으로 선언되어 있지 않은 클래스에 대해서만 자동으로 작성되며, 만일 이동 연산이 하나라도 선언되어 있으면 삭제된다.
+<br>
+복사 배정 연산자는 복사 배정 연산자가 명시적으로 선언되어 있지 않은 클래스에 대해서만 자동으로 작성되며, 만일 이동 연산이 하나라도 선언되어 있으면 삭제된다.
+<br>
+소멸자가 명시적으로 선언된 클래스에서 복사 연산들이 자동으로 작성되는 기능은 비권장이다.
+<br>
+멤버 함수 템플릿 때문에 특수 멤버 함수의 자동 작성이 금지되는 경우는 없다.
