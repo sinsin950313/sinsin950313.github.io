@@ -162,7 +162,7 @@ Main에서 필요 시 Token과 Switch 파싱
 ```
 Commandlet 클래스 이름에는 Commandlet을 꼭 붙일 필요는 없음
 
-Build된 exe에서 실행 시 uproject는 필요 없음(GPCC 참고)
+Build된 exe에서 실행 시 uproject는 필요 없음
 
 ## 출력창
 ```
